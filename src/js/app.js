@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){   //callback
     eventListeners();
     darkMode();
-    // darkChange();
+    addYear();
 });
 
 function darkMode(){
@@ -44,4 +44,9 @@ function navegacionResponsive(){
     const navegacion = document.querySelector('.navegacion')
 
     navegacion.classList.toggle('mostrar'); //elimina o agrega la clase mostrar
+}
+function addYear(){
+    const item = document.querySelector('.item');
+    year = new Date().getFullYear();
+    item.textContent = year;
 }
